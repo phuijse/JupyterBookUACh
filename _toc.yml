@@ -1,0 +1,11 @@
+- file: README
+  numbered: true
+
+- part: Unidad 1
+  chapters:
+    - file: contenidos/unidad1/clase1
+    - file: contenidos/unidad1/clase2
+- part: Unidad 2
+  chapters:
+    - file: contenidos/unidad2/clase3
+
