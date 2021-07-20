@@ -1,11 +1,12 @@
-- file: README
+format: jb-book
+root: README
+parts:
+- caption: Unidad 1
   numbered: true
-
-- part: Unidad 1
   chapters:
-    - file: contenidos/unidad1/clase1
-    - file: contenidos/unidad1/clase2
-- part: Unidad 2
+  - file: contenidos/unidad1/clase1
+  - file: contenidos/unidad1/clase2
+- caption: Unidad 2
+  numbered: true
   chapters:
-    - file: contenidos/unidad2/clase3
-
+  - file: contenidos/unidad2/clase3
