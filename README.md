@@ -2,7 +2,7 @@
 
 ## Resumen de la sesión 
 
-En esta sesión tutorial se enseñará a instalar y utilizar la suite de herramientas Jupyter Book (https://jupyterbook.org/intro.html) para confeccionar libros virtuales open source a partir de material docente pre-existente escrito o adaptado a los formatos Mardown, reStructuredText o Jupyter notebook. 
+En esta sesión tutorial se enseñará a instalar y utilizar la suite de herramientas [Jupyter Book](https://jupyterbook.org/intro.html) para confeccionar libros virtuales open source a partir de material docente pre-existente escrito o adaptado a los formatos Mardown, reStructuredText o Jupyter notebook. 
 
 El resultado es un libro interactivo que se aloja en un sitio web y que combina elementos estáticos como texto enriquecido, formatos multimedia (imágenes, audio y video) y ecuaciones, con elementos interactivos como controles de interfaz de usuario, visualizaciones de datos y en general cualquier resultado de una rutina escrita en Python, R o Julia. 
 
@@ -12,8 +12,8 @@ Estas características hacen que estos libros virtuales sean particularmente út
 
 - Computador con navegador web (firefox, chrome, etc)
 - Editor de texto plano o IDE
-- Manejador de ambientes conda (https://docs.conda.io/en/latest/)
-- (opcional) Cliente git (https://git-scm.com/) 
+- Manejador de ambientes [conda](https://docs.conda.io/en/latest/)
+- (opcional) Cliente [git](https://git-scm.com/) 
 
 ## Ejemplos 
 
