@@ -1,41 +1,26 @@
 # Book settings
-title: El título del libro
-author: El autor del libro 
-logo: logo.png
-only_build_toc_files: true
-exclude_patterns : [_build, "**.ipynb_checkpoints"]
+# Learn more at https://jupyterbook.org/customize/config.html
 
+title: Mi primer jupyter-book
+author: Pablo Huijse
+logo: logo.png
+
+# Force re-execution of notebooks on each build.
+# See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: force
   allow_errors: true
 
-
-#repository:
-#  url: https://github.com/magister-informatica-uach/INFO147
-
-html:
-  home_page_in_navbar: false
-  use_repository_button: false
-  use_issues_button: false
-  use_edit_page_button: false
-  only_build_toc_files: true
-
-sphinx:
-  extra_extensions: [bokeh.sphinxext.bokeh_plot]
-  config:
-    html_show_copyright: false
-    language: es
-    myst_enable_extensions: 
-    - amsmath
-    - colon_fence
-    - deflist
-    - dollarmath
-    - html_image
-    - linkify
-    - replacements
-    - smartquotes
-    - substitution
-
+# Define the name of the latex output file for PDF builds
 latex:
   latex_documents:
     targetname: book.tex
+
+# Add a bibtex file so that we can create citations
+bibtex_bibfiles:
+  - references.bib
+  
+sphinx:
+  extra_extensions: [bokeh.sphinxext.bokeh_plot]
+  config:
+    language: es

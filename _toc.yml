@@ -1,12 +1,13 @@
+
 format: jb-book
 root: README
 parts:
-- caption: Unidad 1
-  numbered: true
-  chapters:
-  - file: contenidos/unidad1/clase1
-  - file: contenidos/unidad1/clase2
-- caption: Unidad 2
-  numbered: true
-  chapters:
-  - file: contenidos/unidad2/clase3
+  - caption: Instalación y uso de jupyter book
+    numbered: true
+    chapters:
+    - file: contenidos/unidad1/clase1
+    - file: contenidos/unidad1/clase2
+  - caption: Escribiendo los contenidos del libro
+    numbered: true
+    chapters:
+    - file: contenidos/unidad2/clase3
