@@ -16,6 +16,34 @@ Una vez descargado ejecute el instalador y siga las instrucciones para instalar 
 
 ## Abriendo una terminal 
 
+### En sistemas Windows: 
+
+Luego de instalar `miniconda` debería ver en la barra de inicio dos accesos directos en la carpeta `Anaconda3 (64-bit)` como se muestra en la siguiente imagen
+
+Seleccione `Anaconda Powershell Prompt`, de desplegará una terminal como muestra la siguiente imagen
+
+### En sistemas Linux:
+
+Pendiente
+
+## Creando el ambiente de desarrollo
+
+Escribe en la terminal los siguientes comandos para crear y activar un ambiente de desarrollo limpio
+
+```
+conda create -n jupyter-book-demo
+conda activate jupyter-book-demo
+```
+
+Luego instala las librerías necesarias para confeccionar el libro usando
+
+```
+conda install jupyter ipython matplotlib numpy ipywidgets bokeh
+conda install jupyter-book -c conda-forge
+```
+
+Con esto ya tienes todo lo necesario para confeccionar tu libro, puedes pasar a la siguiente lección
+
 
 ## (Opcional) Comandos básicos de conda
 
