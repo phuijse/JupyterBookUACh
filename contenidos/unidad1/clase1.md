@@ -42,7 +42,7 @@ conda activate jupyter-book-demo
 Luego instala las librerías necesarias para confeccionar el libro usando
 
 ```
-conda install jupyter ipython matplotlib numpy pandas ipywidgets bokeh
+conda install jupyter ipython matplotlib numpy pandas ipywidgets bokeh ghp-import
 conda install jupyter-book -c conda-forge
 ```
 
