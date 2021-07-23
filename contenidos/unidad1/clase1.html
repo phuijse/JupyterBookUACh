@@ -148,6 +148,18 @@
   </a>
  </li>
 </ul>
+<p class="caption">
+ <span class="caption-text">
+  Subiendo el libro a internet
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../unidad3/clase7.html">
+   8. Github pages
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -264,7 +276,7 @@
 <div class="section" id="instalacion-de-conda">
 <h2><span class="section-number">1.1. </span>Instalación de conda<a class="headerlink" href="#instalacion-de-conda" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Utilizaremos el instalador mínimo de conda llamado <code class="docutils literal notranslate"><span class="pre">miniconda</span></code></p>
-<p>Diríjase al sitio web <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">https://docs.conda.io/en/latest/miniconda.html</a> y descargue el instalador para su sistema operativo (Windows 64, Windows 32, MacOSX o Linux) basado en Python 3.8</p>
+<p>Diríjase al sitio web <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">https://docs.conda.io/en/latest/miniconda.html</a> y descargue el instalador para su sistema operativo (Windows 64, Windows 32, MacOSX o Linux) basado en Python 3.7</p>
 <p>Una vez descargado ejecute el instalador y siga las instrucciones para instalar <code class="docutils literal notranslate"><span class="pre">miniconda</span></code> en su equipo. Se requieren al menos 400MB de espacio en disco</p>
 </div>
 <div class="section" id="abriendo-una-terminal">
@@ -289,8 +301,8 @@
 </pre></div>
 </div>
 <p>Luego instala las librerías necesarias para confeccionar el libro usando</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="n">jupyter</span> <span class="n">ipython</span> <span class="n">matplotlib</span> <span class="n">numpy</span> <span class="n">pandas</span> <span class="n">ipywidgets</span> <span class="n">bokeh</span> <span class="n">ghp</span><span class="o">-</span><span class="kn">import</span>
-<span class="nn">conda</span> <span class="n">install</span> <span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.7</span> <span class="n">matplotlib</span> <span class="n">numpy</span> <span class="n">pandas</span> <span class="n">bokeh</span> <span class="n">git</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">ghp</span><span class="o">-</span><span class="kn">import</span>
 </pre></div>
 </div>
 <p>Con esto ya tienes todo lo necesario para confeccionar tu libro, puedes pasar a la siguiente lección</p>
