@@ -42,62 +42,8 @@ conda activate jupyter-book-demo
 Luego instala las librerías necesarias para confeccionar el libro usando
 
 ```
-conda install jupyter ipython matplotlib numpy ipywidgets bokeh
+conda install jupyter ipython matplotlib numpy pandas ipywidgets bokeh
 conda install jupyter-book -c conda-forge
 ```
 
 Con esto ya tienes todo lo necesario para confeccionar tu libro, puedes pasar a la siguiente lección
-
-
-## (Opcional) Comandos básicos de conda
-
-Para buscar las versiones de un paquete llamado `foo` escribimos 
-
-```
-conda search foo
-```
-
-Para instalar la última versión compatible de `foo` escribimos
-
-```
-conda install foo
-```
-
-Para mostrar los paquetes y librerías instalados usamos
-
-```
-conda list
-```
-
-Para crear un ambiente de desarrollo llamado `bar` escribimos
-
-```
-conda create -n bar
-```
-
-Para ver los ambientes que tenemos en nuestro equipo escribimos
-
-```
-conda env list
-```
-
-Para activar un ambiente llamado `bar` usamos
-
-```
-conda activate bar
-```
-
-Para borrar un paqueta llamado `foo` escribimos
-
-```
-conda remove foo
-```
-
-y para borrar un ambiente llamado `bar` usamos
-
-```
-conda env remove -n bar
-```
-
-
-

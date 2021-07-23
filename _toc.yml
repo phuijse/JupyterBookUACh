@@ -8,6 +8,7 @@ parts:
     - file: contenidos/unidad1/clase1
     - file: contenidos/unidad1/clase2
     - file: contenidos/unidad1/clase3
+    - file: contenidos/unidad1/appendix
   - caption: Escribiendo los contenidos del libro
     numbered: true
     chapters:
