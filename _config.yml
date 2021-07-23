@@ -10,6 +10,15 @@ logo: logo.png
 execute:
   execute_notebooks: force
   allow_errors: true
+  
+parse:
+  myst_enable_extensions: 
+    - colon_fence
+    - dollarmath
+    - html_image
+    - linkify
+    - substitution
+  
 
 # Define the name of the latex output file for PDF builds
 latex:
