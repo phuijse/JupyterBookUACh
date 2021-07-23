@@ -10,7 +10,7 @@ En lo que sigue veremos como instalar y configurar conda
 
 Utilizaremos el instalador mínimo de conda llamado `miniconda`
 
-Diríjase al sitio web https://docs.conda.io/en/latest/miniconda.html y descargue el instalador para su sistema operativo (Windows 64, Windows 32, MacOSX o Linux) basado en Python 3.8
+Diríjase al sitio web https://docs.conda.io/en/latest/miniconda.html y descargue el instalador para su sistema operativo (Windows 64, Windows 32, MacOSX o Linux) basado en Python 3.7
 
 Una vez descargado ejecute el instalador y siga las instrucciones para instalar `miniconda` en su equipo. Se requieren al menos 400MB de espacio en disco
 
@@ -42,8 +42,8 @@ conda activate jupyter-book-demo
 Luego instala las librerías necesarias para confeccionar el libro usando
 
 ```
-conda install jupyter ipython matplotlib numpy pandas ipywidgets bokeh git
-conda install jupyter-book ghp-import -c conda-forge
+conda install python=3.7 matplotlib numpy pandas bokeh git
+pip install jupyter-book ghp-import
 ```
 
 Con esto ya tienes todo lo necesario para confeccionar tu libro, puedes pasar a la siguiente lección
