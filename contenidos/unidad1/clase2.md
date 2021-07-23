@@ -8,6 +8,8 @@ El libro que estás leyendo en este momento fue confeccionado a partir de esta p
 
 Puedes clonar el repositorio usando un cliente git o descargar el contenido como un archivo zip haciendo click en *Download ZIP* como se muestra en la siguiente imagen
 
+<img src="../figuras/bajar_zip.png">
+
 Si optaste por descargar el zip no olvides descomprimirlo
 
 ## Comandos básicos de jupyter book
