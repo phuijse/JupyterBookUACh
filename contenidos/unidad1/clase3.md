@@ -12,7 +12,7 @@ El archivo `_toc.yml` es archivo [YAML](https://en.wikipedia.org/wiki/YAML) que 
 
 Se debería ver similar al siguiente ejemplo
 
-```yml
+```yaml
 format: jb-book
 root: README
 parts:
