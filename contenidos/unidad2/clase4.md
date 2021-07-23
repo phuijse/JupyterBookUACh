@@ -63,35 +63,6 @@ Para escribir un enlace o link usamos
 
 Resultado: [Universidad Austral de Chile](http://www.uach.cl)
 
-[asd](https://www.youtube.com/watch?v=-rZQGu6ZdLk&t=3446s)
-
-
-## Ecuaciones
-
-Podemos escribir ecuaciones en latex con el operador $
-
-```
-$x = \sin(2\pi f t)$
-```
-
-Resultado: $x = \sin(2\pi f t)$
-
-Si usamos doble $$
-
-```
-$$
-x = \sin(2\pi f t)
-$$
-```
-
-Resultado: 
-
-$$
-x = \sin(2\pi f t)
-$$
-
-Más detalles en la documentación de ecuaciones de [jupyter book](https://jupyterbook.org/content/math.html)
-
 
 ## Enumeraciones y listas
 
@@ -120,6 +91,33 @@ Para una lista
 - hola
 - mundo
 - mundial
+
+
+## Ecuaciones
+
+Podemos escribir ecuaciones en latex con el operador $
+
+```
+$x = \sin(2\pi f t)$
+```
+
+Resultado: $x = \sin(2\pi f t)$
+
+Si usamos doble $$
+
+```
+$$
+x = \sin(2\pi f t)
+$$
+```
+
+Resultado: 
+
+$$
+x = \sin(2\pi f t)
+$$
+
+Más detalles en la documentación de ecuaciones de [jupyter book](https://jupyterbook.org/content/math.html)
 
 <!-- #region -->
 ## Imágenes
@@ -240,7 +238,3 @@ En este caso resaltamos sintaxis de Python pero
 
 Puedes ver más detalles en el [siguiente link](https://jupyterbook.org/content/content-blocks.html)
 <!-- #endregion -->
-
-```python
-
-```
