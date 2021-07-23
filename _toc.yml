@@ -15,3 +15,7 @@ parts:
     - file: contenidos/unidad2/clase4
     - file: contenidos/unidad2/clase5
     - file: contenidos/unidad2/clase6
+  - caption: Subiendo el libro a internet
+    numbered: true
+    chapters:
+    - file: contenidos/unidad3/clase7
