@@ -20,11 +20,11 @@ Una vez descargado ejecute el instalador y siga las instrucciones para instalar 
 
 Luego de instalar `miniconda` debería ver en la barra de inicio dos accesos directos en la carpeta `Anaconda3 (64-bit)` como se muestra en la siguiente imagen
 
-<img src="figuras/menu_inicio.png">
+<img src="../figuras/menu_inicio.png">
 
 Seleccione `Anaconda Powershell Prompt`, de desplegará una terminal como muestra la siguiente imagen
 
-<img src="figuras/terminal.png">
+<img src="../figuras/terminal.png">
 
 ### En sistemas Linux:
 
