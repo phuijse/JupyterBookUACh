@@ -1,0 +1,352 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1. Preparación del ambiente de desarrollo &#8212; Mi primer jupyter-book</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+    <link rel="next" title="2. Confección del libro de ejemplo" href="clase2.html" />
+    <link rel="prev" title="Confección de libros online interactivos usando Jupyter Book" href="../../README.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Mi primer jupyter-book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar este libro ..." aria-label="Buscar este libro ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../README.html">
+   Confección de libros online interactivos usando Jupyter Book
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Instalación y uso de jupyter book
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   1. Preparación del ambiente de desarrollo
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="clase2.html">
+   2. Confección del libro de ejemplo
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="clase3.html">
+   3. Archivos importantes de la plantilla
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="appendix.html">
+   4. Apéndice: Comandos básicos de conda
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Escribiendo los contenidos del libro
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../unidad2/clase4.html">
+   5. Escribiendo contenidos en formato markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../unidad2/clase5.html">
+   6. Escribiendo contenidos en formato
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     jupyter
+    </span>
+    <span class="pre">
+     notebook
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../unidad2/clase6.html">
+   7. Gráficos interactivos con bokeh y widgets
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Navegación de palanca" aria-controls="site-navigation"
+                title="Navegación de palanca" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Descarga esta pagina"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/contenidos/unidad1/clase1.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Descargar archivo fuente" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir en PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo de pantalla completa"
+        title="Modo de pantalla completa"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenido
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instalacion-de-conda">
+   1.1. Instalación de conda
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#abriendo-una-terminal">
+   1.2. Abriendo una terminal
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#en-sistemas-windows">
+     1.2.1. En sistemas Windows:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#en-sistemas-linux">
+     1.2.2. En sistemas Linux:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creando-el-ambiente-de-desarrollo">
+   1.3. Creando el ambiente de desarrollo
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="preparacion-del-ambiente-de-desarrollo">
+<h1><span class="section-number">1. </span>Preparación del ambiente de desarrollo<a class="headerlink" href="#preparacion-del-ambiente-de-desarrollo" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>En esta lección aprenderemos a instalar un ambiente de desarrollo que nos permita trabajar con la suite <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code>.</p>
+<p>Al ser <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code> una librería de Python existen muchas opciones para lograr este objetivo, sin embargo una de las más simples es instalar el manejar de ambientes y paquetes <a class="reference external" href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html"><code class="docutils literal notranslate"><span class="pre">conda</span></code></a></p>
+<p>En lo que sigue veremos como instalar y configurar conda</p>
+<div class="section" id="instalacion-de-conda">
+<h2><span class="section-number">1.1. </span>Instalación de conda<a class="headerlink" href="#instalacion-de-conda" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Utilizaremos el instalador mínimo de conda llamado <code class="docutils literal notranslate"><span class="pre">miniconda</span></code></p>
+<p>Diríjase al sitio web <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">https://docs.conda.io/en/latest/miniconda.html</a> y descargue el instalador para su sistema operativo (Windows 64, Windows 32, MacOSX o Linux) basado en Python 3.8</p>
+<p>Una vez descargado ejecute el instalador y siga las instrucciones para instalar <code class="docutils literal notranslate"><span class="pre">miniconda</span></code> en su equipo. Se requieren al menos 400MB de espacio en disco</p>
+</div>
+<div class="section" id="abriendo-una-terminal">
+<h2><span class="section-number">1.2. </span>Abriendo una terminal<a class="headerlink" href="#abriendo-una-terminal" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="en-sistemas-windows">
+<h3><span class="section-number">1.2.1. </span>En sistemas Windows:<a class="headerlink" href="#en-sistemas-windows" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Luego de instalar <code class="docutils literal notranslate"><span class="pre">miniconda</span></code> debería ver en la barra de inicio dos accesos directos en la carpeta <code class="docutils literal notranslate"><span class="pre">Anaconda3</span> <span class="pre">(64-bit)</span></code> como se muestra en la siguiente imagen</p>
+<img alt="../../_images/menu_inicio.png" src="../../_images/menu_inicio.png" />
+<p>Seleccione <code class="docutils literal notranslate"><span class="pre">Anaconda</span> <span class="pre">Powershell</span> <span class="pre">Prompt</span></code>, de desplegará una terminal como muestra la siguiente imagen</p>
+<img alt="../../_images/terminal.png" src="../../_images/terminal.png" />
+</div>
+<div class="section" id="en-sistemas-linux">
+<h3><span class="section-number">1.2.2. </span>En sistemas Linux:<a class="headerlink" href="#en-sistemas-linux" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Pendiente</p>
+</div>
+</div>
+<div class="section" id="creando-el-ambiente-de-desarrollo">
+<h2><span class="section-number">1.3. </span>Creando el ambiente de desarrollo<a class="headerlink" href="#creando-el-ambiente-de-desarrollo" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Escribe en la terminal los siguientes comandos para crear y activar un ambiente de desarrollo limpio</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">jupyter</span><span class="o">-</span><span class="n">book</span><span class="o">-</span><span class="n">demo</span>
+<span class="n">conda</span> <span class="n">activate</span> <span class="n">jupyter</span><span class="o">-</span><span class="n">book</span><span class="o">-</span><span class="n">demo</span>
+</pre></div>
+</div>
+<p>Luego instala las librerías necesarias para confeccionar el libro usando</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="n">jupyter</span> <span class="n">ipython</span> <span class="n">matplotlib</span> <span class="n">numpy</span> <span class="n">pandas</span> <span class="n">ipywidgets</span> <span class="n">bokeh</span> <span class="n">ghp</span><span class="o">-</span><span class="kn">import</span>
+<span class="nn">conda</span> <span class="n">install</span> <span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span>
+</pre></div>
+</div>
+<p>Con esto ya tienes todo lo necesario para confeccionar tu libro, puedes pasar a la siguiente lección</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./contenidos/unidad1"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../../README.html" title="previous page">Confección de libros online interactivos usando Jupyter Book</a>
+    <a class='right-next' id="next-link" href="clase2.html" title="next page"><span class="section-number">2. </span>Confección del libro de ejemplo</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          Por Pablo Huijse<br/>
+        
+            &copy; Derechos de autor 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

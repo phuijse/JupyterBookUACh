@@ -1,0 +1,522 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5. Escribiendo contenidos en formato markdown &#8212; Mi primer jupyter-book</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+    <link rel="next" title="6. Escribiendo contenidos en formato jupyter notebook" href="clase5.html" />
+    <link rel="prev" title="4. Apéndice: Comandos básicos de conda" href="../unidad1/appendix.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Mi primer jupyter-book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar este libro ..." aria-label="Buscar este libro ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../README.html">
+   Confección de libros online interactivos usando Jupyter Book
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Instalación y uso de jupyter book
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../unidad1/clase1.html">
+   1. Preparación del ambiente de desarrollo
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../unidad1/clase2.html">
+   2. Confección del libro de ejemplo
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../unidad1/clase3.html">
+   3. Archivos importantes de la plantilla
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../unidad1/appendix.html">
+   4. Apéndice: Comandos básicos de conda
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Escribiendo los contenidos del libro
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   5. Escribiendo contenidos en formato markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="clase5.html">
+   6. Escribiendo contenidos en formato
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     jupyter
+    </span>
+    <span class="pre">
+     notebook
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="clase6.html">
+   7. Gráficos interactivos con bokeh y widgets
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Navegación de palanca" aria-controls="site-navigation"
+                title="Navegación de palanca" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Descarga esta pagina"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/contenidos/unidad2/clase4.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Descargar archivo fuente" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir en PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo de pantalla completa"
+        title="Modo de pantalla completa"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenido
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#encabezados">
+   5.1. Encabezados
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#estilos">
+   5.2. Estilos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#enlaces">
+   5.3. Enlaces
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#enumeraciones-y-listas">
+   5.4. Enumeraciones y listas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ecuaciones">
+   5.5. Ecuaciones
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#imagenes">
+   5.6. Imágenes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#citas">
+   5.7. Citas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bloques-de-texto-especiales">
+   5.8. Bloques de texto especiales
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="escribiendo-contenidos-en-formato-markdown">
+<h1><span class="section-number">5. </span>Escribiendo contenidos en formato markdown<a class="headerlink" href="#escribiendo-contenidos-en-formato-markdown" title="Enlazar permanentemente con este título">¶</a></h1>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> es un <a class="reference external" href="https://en.wikipedia.org/wiki/Markup_language">lenguaje de marcado</a> diseñado para escribir texto con formato (color, tamaño, tipo) que es muy sencillo de «programar»</p>
+<p>Un archivo markdown es un archivo de texto plano con extensión <code class="docutils literal notranslate"><span class="pre">.md</span></code>, puedes abrirlo y editarlo con un editor de texto plano de tu elección</p>
+<p>Dentro de un archivo <code class="docutils literal notranslate"><span class="pre">markdown</span></code> se pueden usar casi todos los tags de <code class="docutils literal notranslate"><span class="pre">HTML</span></code>, el lenguaje de marcado de las páginas web. Enhorabuena si sabes <code class="docutils literal notranslate"><span class="pre">HTML</span></code></p>
+<p>La página que estás viendo ahora fue creada a partir de un archivo markdown. A continuación veremos algunos ejemplos de sintaxis markdown y su resultado</p>
+<div class="section" id="encabezados">
+<h2><span class="section-number">5.1. </span>Encabezados<a class="headerlink" href="#encabezados" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Para escribir encabezados/títulos usamos el signo #, por ejemplo</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Título de primer orden</span>
+<span class="c1">## Título de segundo orden</span>
+<span class="c1">### Título de tercer orden</span>
+</pre></div>
+</div>
+<p>Los encabezados son leidos por jupyter-book para generar las secciones enumeradas de la página y la tabla de contenidos flotante que se ve a la derecha de cada página.</p>
+<div class="admonition warning">
+<p class="admonition-title">Advertencia</p>
+<p>Sólo puede haber un encabezado de primer orden y debe estar al inicio. Este encabezado actúa como el título de la página</p>
+</div>
+</div>
+<div class="section" id="estilos">
+<h2><span class="section-number">5.2. </span>Estilos<a class="headerlink" href="#estilos" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Para escribir con estilo cursiva usamos</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="n">hola</span> <span class="n">mundo</span><span class="o">*</span>
+</pre></div>
+</div>
+<p>Resultado: <em>hola mundo</em></p>
+<p>Para escribir con estilo bold usamos</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">**</span><span class="n">hola</span> <span class="n">mundo</span><span class="o">**</span>
+</pre></div>
+</div>
+<p>Resultado: <strong>hola mundo</strong></p>
+<p>Para escribir en monotype usamos</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>`hola mundo`
+</pre></div>
+</div>
+<p>Resultado: <code class="docutils literal notranslate"><span class="pre">hola</span> <span class="pre">mundo</span></code></p>
+</div>
+<div class="section" id="enlaces">
+<h2><span class="section-number">5.3. </span>Enlaces<a class="headerlink" href="#enlaces" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Para escribir un enlace o link usamos</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Universidad</span> <span class="n">Austral</span> <span class="n">de</span> <span class="n">Chile</span><span class="p">](</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">uach</span><span class="o">.</span><span class="n">cl</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Resultado: <a class="reference external" href="http://www.uach.cl">Universidad Austral de Chile</a></p>
+</div>
+<div class="section" id="enumeraciones-y-listas">
+<h2><span class="section-number">5.4. </span>Enumeraciones y listas<a class="headerlink" href="#enumeraciones-y-listas" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Para hacer una enumeración usamos</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="n">hola</span>
+<span class="mf">1.</span> <span class="n">mundo</span>
+<span class="mf">1.</span> <span class="n">mundial</span>
+</pre></div>
+</div>
+<p>Resultado:</p>
+<ol class="simple">
+<li><p>hola</p></li>
+<li><p>mundo</p></li>
+<li><p>mundial</p></li>
+</ol>
+<p>Para una lista</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">hola</span>
+<span class="o">-</span> <span class="n">mundo</span>
+<span class="o">-</span> <span class="n">mundial</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>hola</p></li>
+<li><p>mundo</p></li>
+<li><p>mundial</p></li>
+</ul>
+</div>
+<div class="section" id="ecuaciones">
+<h2><span class="section-number">5.5. </span>Ecuaciones<a class="headerlink" href="#ecuaciones" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Podemos escribir ecuaciones en latex con el operador $</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$x = \sin(2\pi f t)$
+</pre></div>
+</div>
+<p>Resultado: <span class="math notranslate nohighlight">\(x = \sin(2\pi f t)\)</span></p>
+<p>Si usamos doble $$</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$$
+x = \sin(2\pi f t)
+$$
+</pre></div>
+</div>
+<p>Resultado:</p>
+<div class="math notranslate nohighlight">
+\[
+x = \sin(2\pi f t)
+\]</div>
+<p>Más detalles en la documentación de ecuaciones de <a class="reference external" href="https://jupyterbook.org/content/math.html">jupyter book</a></p>
+<!-- #region -->
+</div>
+<div class="section" id="imagenes">
+<h2><span class="section-number">5.6. </span>Imágenes<a class="headerlink" href="#imagenes" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Podemos mostrar imágenes con</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>![un_caption](../../logo.png)
+</pre></div>
+</div>
+<p>Resultado:</p>
+<p><img alt="un_caption" src="../../_images/logo.png" /></p>
+<p>o si queremos más opciones podemos usar HTML</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;../../logo.png&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;100&quot;</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Resultado:</p>
+<a class="reference internal image-reference" href="../../_images/logo.png"><img alt="../../_images/logo.png" src="../../_images/logo.png" style="width: 100px;" /></a>
+<p>Más detalles en la documentación de imágenes de <a class="reference external" href="https://jupyterbook.org/content/figures.html">jupyter book</a></p>
+<!-- #endregion -->
+</div>
+<div class="section" id="citas">
+<h2><span class="section-number">5.7. </span>Citas<a class="headerlink" href="#citas" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Puedes citar un artículo o libro de tu archivo <code class="docutils literal notranslate"><span class="pre">references.bib</span></code> como</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{cite:p}`sokol2021you`
+</pre></div>
+</div>
+<p>Resultado:</p>
+<p><span id="id1">[<a class="reference internal" href="#id3">Sokol and Flach, 2021</a>]</span></p>
+<p>Para generar la lista de referencias se usa</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```{bibliography}
+```
+</pre></div>
+</div>
+<p>Resultado:</p>
+<p id="id2"><dl class="citation">
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">SF21</a></span></dt>
+<dd><p>Kacper Sokol and Peter Flach. You only write thrice: creating documents, computational notebooks and presentations from a single source. In <em>Beyond static papers: Rethinking how we share scientific understanding in ML-ICLR 2021 workshop</em>. 2021.</p>
+</dd>
+</dl>
+</p>
+<p>Más detalles en la documentación de citas y bibliografías de <a class="reference external" href="https://jupyterbook.org/tutorials/references.html#create-a-citation">jupyter book</a></p>
+<!-- #region -->
+</div>
+<div class="section" id="bloques-de-texto-especiales">
+<h2><span class="section-number">5.8. </span>Bloques de texto especiales<a class="headerlink" href="#bloques-de-texto-especiales" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Jupyter book soporta unos bloques especiales llamados amonestaciones que sirven para llamar la atención del lector por ejemplo</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```{note}
+Esto es una nota
+```
+</pre></div>
+</div>
+<p>Resultado:</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Esto es una nota</p>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```{warning}
+Esto es una advertencia
+```
+</pre></div>
+</div>
+<p>Resultado:</p>
+<div class="admonition warning">
+<p class="admonition-title">Advertencia</p>
+<p>Esto es una advertencia</p>
+</div>
+<p>Para escribir una cita podemos usar</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; Life is like riding a bicycle. To keep your balance you must keep moving.
+&gt;
+&gt; Albert Einstein
+</pre></div>
+</div>
+<p>Resultado:</p>
+<blockquote>
+<div><p>Life is like riding a bicycle. To keep your balance you must keep moving.</p>
+<p>Albert Einstein</p>
+</div></blockquote>
+<p>Para escribir un bloque de código de programación con sintaxis resaltada podemos usar</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```python
+def Fibonacci(n):
+    if n == 0:
+        return 0
+    elif n == 1 or n == 2:
+        return 1
+    else:
+        return Fibonacci(n-1) + Fibonacci(n-2)
+print(Fibonacci(9))
+```
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">Fibonacci</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">Fibonacci</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Fibonacci</span><span class="p">(</span><span class="mi">9</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>En este caso resaltamos sintaxis de Python pero</p>
+<p>Puedes ver más detalles en el <a class="reference external" href="https://jupyterbook.org/content/content-blocks.html">siguiente link</a></p>
+<!-- #endregion -->
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./contenidos/unidad2"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../unidad1/appendix.html" title="previous page"><span class="section-number">4. </span>Apéndice: Comandos básicos de conda</a>
+    <a class='right-next' id="next-link" href="clase5.html" title="next page"><span class="section-number">6. </span>Escribiendo contenidos en formato <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code></a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          Por Pablo Huijse<br/>
+        
+            &copy; Derechos de autor 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
